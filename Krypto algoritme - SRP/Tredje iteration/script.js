@@ -11,7 +11,7 @@ let krypteringInputVærdi = document.getElementById("kryptering-input-værdi");
 let klartekstInputVærdi = document.getElementById("klartekst-input-værd");
 
 //// Krypterings algoritme ////
-// Vi laver en liste med alle bogstaver i alfabetet og tilgøjer specialtegn
+// Vi laver en liste med alle bogstaver i alfabetet og tilføjer specialtegn
 let alfabet = [
   "a",
   "[",
@@ -115,20 +115,11 @@ let alfabet = [
   " ",
   ")",
 ];
-// Vi difinere vores klarteks, vores nøgle og vores kryptotekst
-let besked =
-  "Går Alt Godt Med Dig? Dejligt vejr idag --> 15 C°. Min mail er: Aminkhaled10@gmail.com & mit tlf. 52 22 22 86. 10+10=20, 4!=24. Kortnummer: *******";
-let nøgle = "srpergodt";
-let kryptobesked =
-  "-p|°!w°3)|x∞°2ou3Z[Øa°XoØ!1ÅωOÅYuC31yrZ°<f:3UÆQ+0iω[_|R£pq¤ωVxXR!]qµvZd:ZxQ!Mrad12itV£ωl3;[ωOÆ¤<F3ØVQSGQJR3]åiO∆]aPQ^V]h°yå<FæjQ)V∞ Aæ;cY|HQy1+D3:¤";
-// Vi sørger for at alle bogstaver er små, da vores alfabet er defineret med små bogstaver
-// nøgle = nøgle.toLowerCase();
-// besked = besked.toLowerCase();
 /*
 Vi laver en funktion der tager en string som input, en nøgle som input,
-og en boolsk-værdi der afgøre om vores string skal krypteres eller dekrypteres
+og en boolsk-værdi der afgøre om vores string skal krypteres eller dekrypteres.
+Vi difinere i øvrigt en liste der kommer til at indholde resultatet
 */
-// Vi difinere i øvrigt en liste der kommer til at indholde resultatet
 let resultat = [];
 function chifrer(string, key, encipher) {
   // Vi laver en for-loop for at kunne gennemløbe og kryptere hele beskeden
@@ -172,22 +163,19 @@ function chifrer(string, key, encipher) {
       );
     }
   }
-  // Vi omdanner listen til en string (tekst)
+  // Vi omdanner listen til en string (altså en tekst)
   resultat = resultat.toString();
   /*
-  Vi erstatter alle kommaer med ingenting. Sagt på en anden måde så sletter vi alle kommaer,
-          eftersom en liste altid har et komma mellem hvert element, som vi ikke behøver at have med.
-          */
+       Vi erstatter alle kommaer med ingenting. Sagt på en anden måde så sletter vi alle kommaer,
+       eftersom en liste altid har et komma mellem hvert element, som vi ikke behøver at have med.
+  */
   resultat = resultat.replace(/,/g, "");
-  // Vi logger resultatet i webværktøjet
+  // Vi skriver resultatet ind i hjemmesiden
   if (encipher == true) {
     krypteringInputVærdi.innerHTML = resultat;
-    console.log("Krypteret besked: " + resultat);
   } else {
     klartekstInputVærdi.innerHTML = resultat;
-    console.log("Dekrypteret besked: " + resultat);
   }
-  return resultat;
 }
 
 // resten af koden er blot for at inkorporere algoritmen med hjemmesiden
