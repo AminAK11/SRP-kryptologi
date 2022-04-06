@@ -7,7 +7,8 @@ Følg disse trin for at få det til at virke:
 2. Skriv din besked der skal krypteres i det næste felt og tryk på knappen.
 3. Kopier Kryptoteksten
 4. Genstart hjemmesiden (ctrl + r)
-5. Indsæt nu kryptoteksten i det sidste tekstfelt og tryk på knappen.
+5. Indtast den samme nøgle som i trin 1, og tyk på knappen.
+6. Indsæt nu kryptoteksten i det sidste tekstfelt og tryk på knappen.
 
 # SRP-kryptologi - HVILKEN FIL SKAL JEG ÅBNE.
 Der er tre mapper, en til hver iteration af udviklingsprocessen.
