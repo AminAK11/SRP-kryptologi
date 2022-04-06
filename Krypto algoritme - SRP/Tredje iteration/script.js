@@ -1,5 +1,4 @@
 // Følgende er blot variabler til at inkorporere algoritmen med hjemmesiden
-//// DOM-manipulation ////
 let klartekstBtn = document.getElementById("klartekst-btn");
 let kryptotekstBtn = document.getElementById("kryptotekst-btn");
 let nøgleBtn = document.getElementById("nøgle-btn");
